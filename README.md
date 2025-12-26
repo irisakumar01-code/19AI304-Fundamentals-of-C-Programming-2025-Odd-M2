@@ -186,7 +186,33 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    int n, i, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
+    {
+        if (n % i == 0)
+            count++;
+    }
+
+    if (count == 2)
+        printf("Prime number");
+    else
+        printf("Not a prime number");
+
+    return 0;
+}
+~~~
 # Output:
+![img](https://github.com/user-attachments/assets/b320ddea-c679-4749-9d1a-7f8fee297a3f)
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -202,7 +228,7 @@ Thus, the program was implemented and executed successfully, and the required ou
  4   2  
  54321
  ```
-# Date : 
+# Date : 22.10.25
 # Aim:
  To build a C program that prints the required numeric pattern for a given value of n using nested loops.
 # Algorithm:
@@ -234,7 +260,37 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    /* First row */
+    for (i = 1; i <= 5; i++)
+        printf("%d", i);
+    printf("\n");
+
+    /* Middle rows */
+    for (i = 2; i <= 4; i++)
+    {
+        printf("%d", i);
+        for (j = 1; j <= 3; j++)
+            printf(" ");
+        printf("%d\n", 6 - i);
+    }
+
+    /* Last row */
+    for (i = 5; i >= 1; i--)
+        printf("%d", i);
+
+    return 0;
+}
+~~~
 # Output:
+![img](https://github.com/user-attachments/assets/7616e10e-79d4-423e-9505-2d3efb3cbede)
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -287,6 +343,41 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+  #program:
+  ~~~
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    /* First line */
+    printf("0\n");
+
+    /* Remaining lines */
+    for (i = 7; i >= 1; i--)
+    {
+        /* Left side */
+        for (j = i; j <= 7; j++)
+            printf("%d ", j);
+
+        /* Middle */
+        printf("0 ");
+
+        /* Right side */
+        for (j = 7; j >= i; j--)
+            printf("%d ", j);
+
+        printf("\n");
+    }
+
+    return 0;
+}
+~~~
+
+  #output:
+  ![img](https://github.com/user-attachments/assets/f710d10d-4472-42f8-af6b-4daa517004ab)
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
