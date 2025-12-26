@@ -15,7 +15,7 @@
   
   The program should display the average marks up to two decimal places and the corresponding grade. 
   
-# Date : 
+# Date : 12.10.25
 # Aim:
  To build a C program that receives inputs for a student’s marks in three subjects, calculates the average, and determines the grade using nested if-else statements with safe floating-point comparisons.
 # Algorithm:
@@ -56,7 +56,43 @@
 ### Step 11:
   Stop
 # Program:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    float math, science, english, average;
+
+    printf("Enter marks in Math, Science and English: ");
+    scanf("%f %f %f", &math, &science, &english);
+
+    average = (math + science + english) / 3.0;
+
+    printf("Average Marks = %.2f\n", average);
+
+    if (average >= 90.0)
+    {
+        printf("Grade: A");
+    }
+    else if (average >= 75.0 && average < 90.0)
+    {
+        printf("Grade: B");
+    }
+    else if (average >= 50.0 && average < 75.0)
+    {
+        printf("Grade: C");
+    }
+    else
+    {
+        printf("Grade: F");
+    }
+
+    return 0;
+}
+~~~
 # Output:
+![img](https://github.com/user-attachments/assets/865a710d-a8b6-4cad-a917-de443c1ffee9)
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -64,7 +100,7 @@ Thus, the program was implemented and executed successfully, and the required ou
 # IAPR-2- Module 2 - FoC
 # Ex.No:7
   Develop a C program to display the multiplication table of a given number (15) up to 10.
-# Date : 
+# Date : 15.10,25
 # Aim:
  To develop a C program that prints the multiplication table of the number 15 up to 10 using a for loop.
 # Algorithm:
@@ -86,9 +122,28 @@ Thus, the program was implemented and executed successfully, and the required ou
   b. Print the result in the format: number x i = result.
 ### Step 6: 
   Stop
+  
+# Output:
+![img](https://github.com/user-attachments/assets/e8f458a5-8f17-4fce-a11f-3a64ff1eaa9a)
+
 
 # Program:
-# Output:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    int i, num = 15;
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}
+~~~
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -96,7 +151,7 @@ Thus, the program was implemented and executed successfully, and the required ou
 # IAPR-2- Module 2 - FoC
 # Ex.No:8
   Develop a C program to check whether a given number is prime or not.
-# Date : 
+# Date : 18.10.25
 # Aim:
  To develop a C program that determines whether an input number is a prime number using a while loop.
 # Algorithm:
